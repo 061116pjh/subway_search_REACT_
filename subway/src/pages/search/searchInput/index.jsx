@@ -9,13 +9,15 @@ function SearchInput({onChange, onKeyDown }){
   const arrowDown = ({code}) => {
     if(code === "ArrowDown"){
       const $lis = document.querySelectorAll("li");
-      $lis.forEach(e => {
-        e.classList.remove("active");
-      });
-      $lis[index].classList.add("active");
-      if(index === $lis.length-1) index = 0;
-      else index++;
-      // onKeyDown($lis);
+      if($lis.length !== 0){
+        $lis.forEach(e => {
+          e.classList.remove("active");
+        });
+        $lis[index].classList.add("active");
+        if(index === $lis.length-1) index = 0;
+        else index++;
+        // onKeyDown($lis);
+      }
     };
   }
   return(
