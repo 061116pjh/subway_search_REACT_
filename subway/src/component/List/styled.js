@@ -12,3 +12,7 @@ export const List = styled.li`
 export const Content = styled.p`
   width: 150px;
 `;
+
+export const Span = styled.span`
+  color: #f00;
+`;

@@ -10,7 +10,7 @@ function ListItem({sort_stationList, value}){
         .filter(({station_nm}) => station_nm.includes(value))
         .filter((v, i) => i <= 9)
         .map(({station_nm, station_cd, line_num}) => {
-          return <List key={station_cd} station_nm={station_nm} line_num={line_num}></List>;
+          return <List key={station_cd} station_nm={station_nm} line_num={line_num} value={value}></List>;
         })
       }
     </S.Ul>
